@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { InventoryList } from './components/InventoryList';
 import { AddInventoryForm } from './components/AddInventoryForm';
 import { Divider, notification } from 'antd';
@@ -20,15 +20,11 @@ const inventoryItems: Item[] = [
   },
 ];
 
+
+
 function App() {
-  const [items, setTodos] = useState(inventoryItems);
-
-  const addTodo: AddTodo = (id: string, text: string, expiry: Date, comment: string) => {
-    const newItem = { id, text, expiry, comment };
-    setTodos([...items, newItem]);
-  };
-
-  interval(10*1000)
+  useEffect(() => {
+    const timerSub = interval(10*1000)
     .subscribe((val) => {
       var today = new Date();
       items.forEach(item => {
@@ -41,6 +37,16 @@ function App() {
         }
       });
     });
+    return ()=>{
+      timerSub.unsubscribe();
+    }
+  });
+  
+  const [items, setTodos] = useState(inventoryItems);
+  const addTodo: AddTodo = (id: string, text: string, expiry: Date, comment: string) => {
+    const newItem = { id, text, expiry, comment };
+    setTodos([...items, newItem]);
+  };
 
   return (
     <div className="App">
