@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/expired-inventory-reminder/precache-manifest.be16694389014ee7e5f7a09e32b96fb4.js"
+  "/expired-inventory-reminder/precache-manifest.3ae54050b9e60a48a6ff233c16c3c01d.js"
 );
 
 workbox.clientsClaim();
