@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "ad49b14d39b9f87a2687",
+    "revision": "61f56f9ed1112f9d16e5",
     "url": "/expired-inventory-reminder/static/css/main.11d832ee.chunk.css"
   },
   {
-    "revision": "ad49b14d39b9f87a2687",
-    "url": "/expired-inventory-reminder/static/js/main.7bb3df03.chunk.js"
+    "revision": "61f56f9ed1112f9d16e5",
+    "url": "/expired-inventory-reminder/static/js/main.fdbc1cce.chunk.js"
   },
   {
     "revision": "114b19d357963a381b76",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/expired-inventory-reminder/static/js/2.7d2961ef.chunk.js"
   },
   {
-    "revision": "30ee11362a714930b48716ac970fe0e5",
+    "revision": "8600dfac101cfe0bcc605dcfc6f7c06f",
     "url": "/expired-inventory-reminder/index.html"
   }
 ];
