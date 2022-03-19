@@ -8,11 +8,11 @@ interface Props {
 }
 
 const layout = {
-  labelCol: { span: 8 },
+  labelCol: { span: 4 },
   wrapperCol: { span: 8 },
 };
 const tailLayout = {
-  wrapperCol: { offset: 8, span: 16 },
+  wrapperCol: { offset: 4, span: 8 },
 };
 
 export const AddInventoryForm: React.FC<Props> = ({addTodo}) => {
@@ -23,7 +23,6 @@ export const AddInventoryForm: React.FC<Props> = ({addTodo}) => {
   const [form] = Form.useForm();
   const onFinish = (values: any) => {
     addTodo(values.id, values.text, values.expiry.toDate(), values.comment);
-    //addTodo(id, text, startDate, comment);
     form.resetFields();
   };
   return (
